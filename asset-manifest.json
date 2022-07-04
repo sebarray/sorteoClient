@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sorteoClient/static/css/main.20174431.css",
-    "main.js": "/sorteoClient/static/js/main.e558e4d7.js",
+    "main.css": "/sorteoClient/static/css/main.5a2a2620.css",
+    "main.js": "/sorteoClient/static/js/main.61b123a7.js",
     "index.html": "/sorteoClient/index.html",
-    "main.20174431.css.map": "/sorteoClient/static/css/main.20174431.css.map",
-    "main.e558e4d7.js.map": "/sorteoClient/static/js/main.e558e4d7.js.map"
+    "main.5a2a2620.css.map": "/sorteoClient/static/css/main.5a2a2620.css.map",
+    "main.61b123a7.js.map": "/sorteoClient/static/js/main.61b123a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.20174431.css",
-    "static/js/main.e558e4d7.js"
+    "static/css/main.5a2a2620.css",
+    "static/js/main.61b123a7.js"
   ]
 }
