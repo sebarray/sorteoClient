@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './App.css';
 
 
 
@@ -24,7 +24,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8084/cupon", requestOptions)
+fetch("https://sebarray-sorteo.herokuapp.com/cupon", requestOptions)
   .then(response => response.text())
   .then(result => setSorteo(result))
   .catch(error => console.log('error', error));
@@ -35,8 +35,13 @@ fetch("http://localhost:8084/cupon", requestOptions)
         <div>
          <button onClick={getc}>obtener cupon</button>
          <div>
-         {sorteo!==""? <p>{sorteo}</p>:<p>presione ppara optener el cupon</p>
-         
+         {sorteo!==""?
+        <div>
+            
+          <p>{sorteo}
+          </p> 
+         </div>:
+          <p>presione ppara optener el cupon</p>
          }
          </div>
             <p></p>
