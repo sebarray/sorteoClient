@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import './App.css';
-
+import './button.scss';
+import"./load.css"
 
 
 
   const Getcupon=()=> {
-    const [sorteo, setSorteo] = useState("");
-
+    const [sorteo, setSorteo] = useState('');
+    const [clic, setclic] = useState(true);
 
     const getc=()=>{
 
+      setclic(false)
         var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -26,22 +27,34 @@ var requestOptions = {
 
 fetch("https://sebarray-sorteo.herokuapp.com/cupon", requestOptions)
   .then(response => response.text())
-  .then(result => setSorteo(result))
+  .then(result =>{ 
+     setSorteo(result)
+    setTimeout(setclic(true),10000)
+  })
   .catch(error => console.log('error', error));
     }
 
 
     return (
         <div>
-         <button onClick={getc}>obtener cupon</button>
+         <div className="button2"  id="b" onClick={getc}>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  obtener cupon
+</div>
          <div>
-         {sorteo!==""?
-        <div>
-            
-          <p>{sorteo}
-          </p> 
-         </div>:
-          <p>presione ppara optener el cupon</p>
+         {sorteo==='' && clic===true?
+         <></>
+         :
+         !clic?
+         <span class="loader">Load&nbsp;ng</span>
+         :
+          <p>{sorteo}</p> 
+         
+         
+          
          }
          </div>
             <p></p>

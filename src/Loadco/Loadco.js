@@ -9,7 +9,7 @@ const Loadco = () => {
       render: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./coffeeAnimate.json"),
+      animationData: require("./Loadco.json"),
     });
   }, []);
 
